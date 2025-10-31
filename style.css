@@ -1,0 +1,395 @@
+/*Estilo geral*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+h1{
+    font-size: 40px;
+    color: var(--roxo);
+    font-weight: bold;
+}
+
+h3{
+    color: var(--grey);
+}
+
+p{
+    font-size: 16px;
+    font-weight: lighter;
+    color: var(--grey);
+}
+
+a{
+    text-decoration: none;
+}
+
+.ctn{
+    width: 100px;
+    padding: 8px 12px;
+    background: var(--roxo);
+    color: whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.ctn:hover{
+    background: whitesmoke;
+    border: 1px solid var(--roxo);
+    color: var(--roxo);
+    font-weight: lighter;
+}
+
+:root {
+    --roxo: #690dab;
+    --roxo-claro: #9b58b6;
+    --blue: #1f8fff;
+    --circle: #f0f8ff;
+    --grey: grey;
+    --rosa-claro: #e1b5e8;
+}
+
+.container{
+    width: 80%;
+    margin: 60px auto;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+.col{
+    display: flex;
+    justify-content: center;
+}
+
+.highlight{
+    color: var(--blue);
+}
+
+.circle{
+    width: 500px;
+    height: 500px;
+    background: var(--circle);
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+body, html{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: semibold;
+  overflow-x: hidden;
+}
+
+.navbar {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.brand img{
+    width: 60px;
+}
+
+.toggle-btn i{
+    font-size: 30px;
+    color: var(--roxo);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+}
+
+.navbar .nav-list ul{
+    display: flex;
+}
+
+/* NOVO: Estilo base dos links na navegação */
+.navbar .nav-list ul li a { 
+    /* Transição para suavizar a cor e o sublinhado no hover */
+    transition: color 0.3s ease-out; 
+    
+    /* Configurações de fonte padrão para os links */
+    color: var(--roxo);
+    font-size: 18px;
+    font-weight: 400; /* Use 400 ou 500 para um visual mais limpo */
+    text-decoration: none; /* Garante que não tenha sublinhado por padrão */
+
+    /* Propriedades para o sublinhado animado (underline) */
+    display: block; /* Necessário para ajustar a altura do sublinhado */
+    position: relative;
+    padding-bottom: 2px; /* Espaço entre o texto e o sublinhado */
+}
+
+/* HOVER MAIS ELEGANTE: Mudar a cor e adicionar um sublinhado sutil */
+.navbar .nav-list ul li a:hover {
+    color: var(--blue); /* Altera a cor do texto no hover */
+}
+
+/* Efeito de sublinhado animado */
+.navbar .nav-list ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; /* Espessura da linha */
+    bottom: 0;
+    left: 0;
+    background-color: var(--blue); /* Cor do sublinhado */
+    transition: width 0.3s ease-out; /* Animação de largura */
+}
+
+.navbar .nav-list ul li a:hover::after {
+    width: 100%; /* No hover, a largura da linha vai de 0 a 100% */
+}
+
+/* Estilo do item da lista (sem o link) */
+.navbar .nav-list ul li {
+    margin: 0px 30px;
+    /* Apenas o cursor é suficiente aqui, o resto vai para o <a> */
+    cursor: pointer; 
+}
+
+.logo {
+    width: 50px;
+}
+
+/* Header */
+.header {
+    margin-top: 0px;
+    height: 100vh;
+}
+
+.header .col-1{
+    width: 100%;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.header .col-2{
+    width: 100%;
+}
+
+.header .col-2 img{
+    max-width: 80%;
+}
+
+.header h1{
+    margin-bottom: 30px;
+}
+
+.header p{
+    margin: 30px auto;
+}
+
+/*quem somos*/
+.title{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.grid-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+    grid-gap: 50px;
+}
+
+.icon-title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-title img{
+    margin-right: 20px;
+    width: 50px; 
+    height: 50px;
+}
+
+.icon-title h2{
+    font-size: 20px;
+    color: var(--roxo);
+}
+
+.grid-box .highlight{
+    color: var(--roxo);
+    font-weight: bolder;
+}
+
+.grid-box{
+    padding: 30px;
+}
+
+.grid-box:hover{
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.185);
+    border-radius: 20px;
+}
+
+/* Produtos */
+.produtos{
+    margin-top: 150px;
+    position: relative;
+}
+
+.produtos .title{
+    text-align: left;
+}
+
+.produtos .title .ctn-title{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ctn-title h4{
+    color: var(--roxo);
+    cursor: pointer;
+}
+
+.ctn-title .highlight{
+    color: var(--blue);
+}
+
+.produtos .grid-wrapper{
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-gap: 20px;
+}
+
+.produtos .grid-box{
+    position: relative;
+}
+
+.hover{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 60%;
+    height: 60%;
+    background: var(--roxo);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    color: whitesmoke;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.hover .highlight{
+    color: var(--blue);
+}
+
+.produtos .grid-box:hover .hover{
+    transform: scaleX(1);
+}
+
+/* Produtos */
+/* ... (seu código anterior) ... */
+
+/* Novo bloco de código para as imagens */
+.produtos .grid-box img {
+    /* 1. Responsividade e Proporção */
+    max-width: 100%; /* Garante que a imagem não saia da sua caixa (300px) */
+    height: auto;    /* Mantém a proporção original da imagem */
+    
+    /* 2. Definindo a Largura Desejada (Ajuste este valor!) */
+    /* Como o grid-wrapper está configurado para 300px, 100% ou 300px funcionaria bem. */
+    width: 300px; 
+    
+    /* 3. Centralização (Opcional, mas útil) */
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem horizontalmente dentro do grid-box */
+}
+
+/* Contato */
+.contato .container{
+    text-align: center;
+    background: var(--circle);
+    padding: 60px;
+    border-radius: 20px;
+    margin-top: 80px;
+}
+
+.contato .container h3{
+    margin: 40px 0px;
+}
+
+.contato .fa{
+    margin-right: 30px;
+    font-size: 30px;
+    color: var(--roxo);
+}
+
+.contato .quick-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contato .quick-links ul{
+    display: flex;
+}
+
+.contato .quick-links ul li{
+    margin: 0px 20px;
+    cursor: pointer;
+}
+
+.contato .quick-links ul li a {
+    /* Cor de início (Azul) */
+    color: var(--blue);
+    font-weight: lighter;
+    text-decoration: none;
+    transition: color 0.3s ease-out; /* Transição suave para a cor */
+
+    /* Propriedades para o sublinhado animado */
+    display: block;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+/* 3. HOVER: Mudar para roxo e animar o sublinhado roxo */
+.contato .quick-links ul li a:hover {
+    color: var(--roxo); /* Cor do texto no hover (Roxo) */
+}
+
+/* 4. Efeito de sublinhado animado (::after) */
+.contato .quick-links ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; /* Espessura da linha */
+    bottom: 0;
+    left: 0;
+    background-color: var(--roxo); /* Cor do sublinhado (Roxo) */
+    transition: width 0.3s ease-out; /* Animação de largura */
+}
+
+.contato .quick-links ul li a:hover::after {
+    width: 100%; /* No hover, a linha se expande */
+}
+
+.contato .quick-links img{
+    width: 100px;
+    height: auto;  
+}
+
+.copyright p{
+    color: var(--roxo);
+    font-weight: lighter;
+}
